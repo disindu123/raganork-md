@@ -70,7 +70,7 @@ async function dlSong(vid){
 }
 async function ytTitle(vid){
   const yt = await Innertube.create({ cache: new UniversalCache() });
-  const video = await yt.getBasicInfo(vid);
+  const video = await yt.getBasicInfo(vid,"TV_EMBEDDED");
   return video.basic_info.title
 }
 async function getSearchImage(vid){
